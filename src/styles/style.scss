@@ -1,0 +1,93 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+  padding: 2em; 
+}
+
+h1{
+    text-align: center;
+    color: #585630;
+    //color: #FBB03B; Jake Yellow
+}
+
+
+
+h3{
+    color: #585630; // dark green
+    //color: #7DA82D; //light green 
+    text-align: center;
+    font-size: 20px;
+}
+
+h5{
+  color: #585630;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: #398A81;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+
+.products{
+    text-align: center;
+}
+
+
+.embForm {
+    padding: 6em;
+}
+
+
+
+ input[type=text], input[type=password] {
+    //width: 40%;
+    padding: 12px 20px;
+    margin: 10px 100px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+ button {
+    background-color: #7DA82D;
+    color: white;
+    padding: 12px 20px;
+    margin: 30px 100px;
+    margin-left: 180px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+.registerForm, .loginForm{
+    width: 50%;
+    text-align: center;
+    border: 2px solid #ccc;
+    margin-left: 230px;
+}
