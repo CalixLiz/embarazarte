@@ -5,6 +5,7 @@ import STORE from '../store'
 import ACTIONS from '../actions'
  
 import Banner from '../banner'
+import User from '../models/userModel'
  
  
        
@@ -56,7 +57,7 @@ var Product = React.createClass({
 					<img src={this.props.producDetails.get('mediumImage')}/>
 				</div>
 			)
-	}
+	} 
 })
 
 

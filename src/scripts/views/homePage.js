@@ -47,8 +47,13 @@ var HomePage = React.createClass({
     return (
         <div>
           <Banner />
-          <p>Due date?</p>
-          <input type='date' onChange={this.handleKeyDown}/>   
+          <label><span>Due date? <span>*</span></span><input type='date' onChange={this.handleKeyDown}/></label>  
+          <label><span>Gender of your baby</span>
+          <select>
+          <option>Boy</option>
+          <option>Girl</option>
+          <option>I don't Know</option>
+          </select></label> 
         </div>
       )
   }

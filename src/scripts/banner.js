@@ -1,10 +1,13 @@
 import React from 'react'
 import Backbone from 'backbone'
 import ACTIONS from './actions'
+import User from './models/userModel'
 
 
 var Banner = React.createClass({
+
 	render: function() {
+		console.log(`welcome ${User}`)
 		return (
 			<div>
 				<h1>Embaraz Arte</h1>
@@ -15,6 +18,7 @@ var Banner = React.createClass({
 							<li className='a'><a href="#login">SIGN UP</a></li>
 							<li className='a'><a onClick = {ACTIONS.logout} >LOG OUT</a></li>
 						</ul>
+						<h2 className='user-welcome'>Welcome User</h2>
 					</div> 
 			</div>
 			)
@@ -22,3 +26,4 @@ var Banner = React.createClass({
 }) 
  
 export default Banner
+  

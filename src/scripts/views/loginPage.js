@@ -11,7 +11,7 @@ const LoginPage = React.createClass({
 			</div>
 			)
 	}
-})
+}) 
 
 const RegisterForm = React.createClass({
 	_handleSubmit: function(evtObj) {
