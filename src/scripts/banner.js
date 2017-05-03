@@ -7,7 +7,7 @@ import User from './models/userModel'
 var Banner = React.createClass({
 
 	render: function() {
-		console.log(`welcome ${User}`)
+		console.log(`welcome ${this.name}`)
 		return (
 			<div>
 				<h1>Embaraz Arte</h1>

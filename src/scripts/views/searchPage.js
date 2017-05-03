@@ -11,8 +11,7 @@ import User from '../models/userModel'
        
 var SearchPage = React.createClass({
 	componentWillMount: function() {
-		console.log('a component will mount')
-
+		
 		ACTIONS.fetchSearch(this.props.queryProp)
 		STORE.on('dataUpdated', () => {
 			this.setState(STORE.data)
@@ -28,7 +27,7 @@ var SearchPage = React.createClass({
 		for(var i=0; i<this.state.items.models.length; i++){
 			product.push(<Product producDetails={this.state.items.models[i]} />)
 		}
-		console.log(product)
+	
 		return product
 	},
  
@@ -39,10 +38,10 @@ var SearchPage = React.createClass({
 
 		return (
 			  <div>
-			  <Banner />
-			  <h3>Looks like you are in your {this.state.trimester} trimester</h3>
-			  <h4>Here are some products that you might find helpful</h4>
-				<div className='product'>{this._showProduct()}</div>
+				  <Banner />
+				  <h3>Looks like you are in your {this.state.trimester} trimester</h3>
+				  <h4>Here are some products that you might find helpful</h4>
+				  <div className='product'>{this._showProduct()}</div>
 				</div>
 			)
 	}

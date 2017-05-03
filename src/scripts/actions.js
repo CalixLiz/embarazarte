@@ -1,13 +1,26 @@
 import SearchCollection from './collection'
 import STORE from './store'
 import LoginPage from './views/loginPage'
-
+import toastr from 'toastr'
 import User from './models/userModel'
+
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-bottom-center",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showEasing": "swing"
+}
+
+
 
 
 var ACTIONS = {
 	fetchSearch: function(query) {
-		console.log(STORE)
 		var searchInstance = STORE.data.items
 		var promise = searchInstance.fetch({  
 			dataType: 'jsonp',
@@ -28,12 +41,11 @@ var ACTIONS = {
 		User.logout()
 		    .done(
 		    	function(resp) {
-		    		alert('you logged out!')
+		    		toastr.success('you logged out!')
 		    		location.hash = 'login'
 		    	})
 		    .fail( function(err) {
-		    	alert('error loging out!')
-		    	console.log(err)
+		    	toastr.error('error loging out!')
 		    })
 	},
 
@@ -41,17 +53,14 @@ var ACTIONS = {
 		User.login(email, password)
 		    .done(
 		    	function(resp) {
-		    		//use toaster here in place of alert any alert
-		    		alert('logged in!')
-		    		console.log(resp)
+		    		toastr.success('logged in!')
 		    		location.hash = 'home'
 		    	}
 		    	)
 		    .fail(
 		    	function(err) {
-		    		alert('problem logged in!')
-		    		console.log(err)
-		    	}
+		    		toastr.error('problem logged in!')
+		       	}
 		    	)
 	},
 
@@ -59,16 +68,14 @@ var ACTIONS = {
 		User.register(userData)
 		    .done(
 		    	function(resp) {
-		    		//use toaster here in place of alert any alert
-		    		alert(`new user ${resp.email} registered`)
-		    		console.log(resp)
+		    		toastr.success(`new user ${resp.email} registered`)
+		    		location.hash = 'home'
 		    	} 
 		    	)
 		    .fail(
 		    	function(err) {
-		    		alert('problem registering user!')
-		    		console.log(err)
-		    	}
+		    		toastr.error('problem registering user!')
+		 	    	}
 		    	)
 	},
 

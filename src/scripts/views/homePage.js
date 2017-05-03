@@ -24,18 +24,15 @@ var HomePage = React.createClass({
          
 
     if(result < 3) {
-      console.log('Trimester 3')
       location.hash = 'search/baby products'
       ACTIONS.setTrimester('Third')
 
     } 
     else if(result < 6) {
-      console.log('Trimester 2')
       location.hash = 'search/pregnant dress'
       ACTIONS.setTrimester('Second')
     } 
     else if(result < 9) {
-        console.log('Trimester 1')
       location.hash = 'search/stretch marks'
       ACTIONS.setTrimester('First')
 
@@ -47,13 +44,16 @@ var HomePage = React.createClass({
     return (
         <div>
           <Banner />
-          <label><span>Due date? <span>*</span></span><input type='date' onChange={this.handleKeyDown}/></label>  
-          <label><span>Gender of your baby</span>
-          <select>
-          <option>Boy</option>
-          <option>Girl</option>
-          <option>I don't Know</option>
-          </select></label> 
+          <form onChange={this.handleKeyDown}>
+            <label><span>Gender of your baby</span>
+              <select name='gender'>
+                <option value='boy'>Boy</option>
+                <option value='girl'>Girl</option>
+                <option value='dontknow'>I don't Know</option>
+              </select></label>
+            <label><span>Due date? <span>*</span></span><input type='date' /></label>  
+             
+          </form>
         </div>
       )
   }

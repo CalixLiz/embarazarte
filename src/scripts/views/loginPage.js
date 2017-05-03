@@ -9,7 +9,7 @@ const LoginPage = React.createClass({
 				<RegisterForm />
 				<LoginForm />
 			</div>
-			)
+			) 
 	}
 }) 
 
