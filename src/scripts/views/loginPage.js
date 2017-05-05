@@ -6,12 +6,26 @@ const LoginPage = React.createClass({
 	render: function() {
 		return(
 			<div className="login-page">
+			  <Banner01 />
 				<RegisterForm />
 				<LoginForm />
 			</div>
 			) 
 	}
 }) 
+
+const Banner01 = React.createClass({
+	render: function() {
+		return(
+			<div>
+				<h1>Embaraz Arte</h1>
+					<ul> 
+						<li className='a loginpage'><a href="#baby">BABY INFO</a></li>
+					</ul>				
+			</div>
+			)
+	}
+})
 
 const RegisterForm = React.createClass({
 	_handleSubmit: function(evtObj) {

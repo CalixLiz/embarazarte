@@ -2,11 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
- 
+
 import HomePage from './views/homePage'
 import SearchCollection from './collection'
 import SearchPage from './views/searchPage'
 import LoginPage from './views/loginPage'
+import BabyInfoPage from './views/babyInfo'
 
 import STORE from './store'
  
@@ -19,6 +20,7 @@ const app = function() {
 		  	"login": "loginPage",
 		    "home": "homePage",
 		    "search/:query": "makeaSearch",
+		    "baby": "babyInfo",
 		    "*default": "redirect"
 		  },
 
@@ -35,6 +37,12 @@ const app = function() {
 
 			  ReactDOM.render(<SearchPage
 			  	queryProp= {query} />, document.querySelector('.container'))		    
+		  },
+
+		  babyInfo: function() {
+		  	console.log('MMS')
+		  	ReactDOM.render(<BabyInfoPage />, document.querySelector('.container'))
+
 		  },
 
 		  redirect: function() {

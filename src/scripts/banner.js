@@ -12,7 +12,7 @@ var Banner = React.createClass({
 			<div>
 				<h1>Embaraz Arte</h1>
 					<div>
-						<ul>
+						<ul> 
 							<li className='a'><a href="#home">HOME</a></li>
 							<li className='a'><a href="#otherpage">OTHER PAGE</a></li>
 							<li className='a'><a href="#login">SIGN UP</a></li>
