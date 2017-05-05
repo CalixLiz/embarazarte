@@ -1,8 +1,9 @@
 import SearchCollection from './collection'
 import STORE from './store'
 import LoginPage from './views/loginPage'
-import toastr from 'toastr'
+import $ from 'jquery'
 import User from './models/userModel'
+
 
 
 toastr.options = {
@@ -10,12 +11,18 @@ toastr.options = {
   "debug": false,
   "newestOnTop": false,
   "progressBar": false,
-  "positionClass": "toast-bottom-center",
+  "positionClass": "toast-top-right",
   "preventDuplicates": false,
   "onclick": null,
-  "showEasing": "swing"
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
 }
-
 
 
 
@@ -69,7 +76,6 @@ var ACTIONS = {
 		    .done(
 		    	function(resp) {
 		    		toastr.success(`new user ${resp.email} registered`)
-		    		location.hash = 'home'
 		    	} 
 		    	)
 		    .fail(
