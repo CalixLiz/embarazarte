@@ -14,7 +14,7 @@ const init = function() {
 	var app_name = 'embarazarte'
 	var user = JSON.parse(findCookie('embarazarte' + '_user'))
 	if (user) {
-		localStorage.setItem(app_name + '_user',user)
+		localStorage.setItem(app_name + '_user',JSON.stringify(user))
 	}
 	else {
 		localStorage.removeItem(app_name + '_user')

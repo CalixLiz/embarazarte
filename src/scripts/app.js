@@ -33,21 +33,17 @@ const app = function() {
 		  },
 
 		  makeaSearch: function(query) {
-			  console.log('MAKING THE SEARCH')
-
 			  ReactDOM.render(<SearchPage
 			  	queryProp= {query} />, document.querySelector('.container'))		    
 		  },
 
 		  babyInfo: function() {
-		  	console.log('MMS')
-		  	ReactDOM.render(<BabyInfoPage />, document.querySelector('.container'))
+		    ReactDOM.render(<BabyInfoPage />, document.querySelector('.container'))
 
 		  },
 
 		  redirect: function() {
 		    location.hash = 'login'
-		    console.log("HOME SWEET HOME")
 		  }
 
 		})

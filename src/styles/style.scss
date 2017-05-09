@@ -112,6 +112,37 @@ li a {
 
 
 
+.babySizesbox{
+    border: 2px solid #ccc;
+    margin-top: 1em;
+    padding: 2em 2em;
+
+}
+
+.insidebox{
+  column-count: 2;
+}
+
+
+.info{
+    margin-top: 6em;
+}
+
+.next {
+   right: -25px;    
+   transform: translate(100%,-50%);
+      }
+
+.previous {
+   left: -25px;
+   transform: translate(-100%,-50%); 
+      }
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 72px;
+   }
+
 
 
 

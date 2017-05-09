@@ -18,6 +18,12 @@ var SearchPage = React.createClass({
 		})
 	},
 
+	// componentWillMount is a chance for us to handle configuration, update our state, 
+	// At this point, props and initial state are defined. 
+	// We can safely query this.props and this.state, 
+	// knowing with certainty they are the current values. 
+	// This means we can start performing calculations or processes based on the prop values.
+
 	getInitialState: function() {
 		return STORE.data
 	},
@@ -32,10 +38,6 @@ var SearchPage = React.createClass({
 	},
  
  	render: function() {
-		console.log('collection is that you?', this.props)
-		console.log('or are you here?', this.state.items)
-		console.log('MMS',this.state.trimester)
-
 		return (
 			  <div>
 				  <Banner />

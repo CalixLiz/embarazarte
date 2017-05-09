@@ -38,7 +38,7 @@ UserAuthModel.login = function(email, password) {
 			password: password
 		}
 	}).then((userData) => {
-		localStorage.setItem(app_name + '_user',JSON.stringify(userData))
+		localStorage.setItem('embarazarte' + '_user',JSON.stringify(userData))
 		return userData
 	},(err)=> {
 		throw new Error(err.responseText)
@@ -47,12 +47,12 @@ UserAuthModel.login = function(email, password) {
 
 UserAuthModel.logout = function() {
 	return $.getJSON('/auth/logout').then(()=>{
-		localStorage.removeItem(app_name + '_user')
+		localStorage.removeItem('embarazarte' + '_user')
 	})
 }
 
 UserAuthModel.getCurrentUser = function() {
-	return JSON.parse(localStorage.getItem(app_name + '_user')) ? new User(JSON.parse(localStorage.getItem(app_name + '_user'))) : null
+	return localStorage.getItem('embarazarte' + '_user') ? new User(JSON.parse(localStorage.getItem('embarazarte' + '_user'))) : null
 }
 
 // ..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
@@ -65,7 +65,7 @@ const User = UserAuthModel.extend({
 	},
 
 	updateCurrentUser: function() {
-		localStorage.setItem('hashiru_user', JSON.stringify(this.attributes))
+		localStorage.setItem('embarazarte_user', JSON.stringify(this.attributes))
 	}
 })
 

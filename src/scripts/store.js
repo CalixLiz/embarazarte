@@ -15,5 +15,6 @@ var STORE = Object.assign({}, Backbone.Events, {
 	}
 })
 
+console.log(STORE)
 export default STORE
   

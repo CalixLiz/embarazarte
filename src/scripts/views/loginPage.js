@@ -2,12 +2,15 @@ import React from 'react'
 import Banner from '../banner'
 import ACTIONS from '../actions'
 
+//LogIn Page, where everything start!
+
+
 const LoginPage = React.createClass({
 	render: function() {
 		return(
 			<div className="login-page">
 			  <Banner01 />
-				<RegisterForm />
+			  <RegisterForm />
 				<LoginForm />
 			</div>
 			) 
