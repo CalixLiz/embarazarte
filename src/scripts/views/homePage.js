@@ -9,7 +9,7 @@ import ACTIONS from '../actions'
 
 var HomePage = React.createClass({
   handleKeyDown: function(obj) {
-    var dueDate = obj.target.value
+      var dueDate = obj.target.value
       window.targetDate = dueDate
 
       var asDate = new Date(targetDate)
@@ -21,7 +21,7 @@ var HomePage = React.createClass({
       var diff = asDate.getTime() - now.getTime()
       var result = diff / 60 / 60 / 24 / 30 / 1000
       console.log(result)
-         
+
 
     if(result < 3) {
       location.hash = 'search/baby products'
@@ -31,11 +31,13 @@ var HomePage = React.createClass({
     else if(result < 6) {
       location.hash = 'search/pregnant dress'
       ACTIONS.setTrimester('Second')
+
+  
     } 
     else if(result < 9) {
       location.hash = 'search/stretch marks'
       ACTIONS.setTrimester('First')
-
+      
       }
   },
 
@@ -54,6 +56,7 @@ var HomePage = React.createClass({
             <label><span>Due date? <span>*</span></span><input type='date' /></label>  
              
           </form>
+
         </div>
       )
   }

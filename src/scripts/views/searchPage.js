@@ -28,6 +28,9 @@ var SearchPage = React.createClass({
 		return STORE.data
 	},
 
+	// The getInitialState method enables to set the initial state value, 
+	// that is accessible inside the component via this.state.
+
 	_showProduct: function(dataProduct) {
 		var product = []
 		for(var i=0; i<this.state.items.models.length; i++){

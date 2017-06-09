@@ -27,8 +27,8 @@ toastr.options = {
 
 
 var ACTIONS = {
+	
 	fetchSearch: function(query) {
-		console.log(STORE)
 		var searchInstance = STORE.data.items
 		var promise = searchInstance.fetch({  
 			dataType: 'jsonp',
